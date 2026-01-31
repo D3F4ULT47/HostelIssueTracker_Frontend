@@ -75,7 +75,7 @@ const Profile = () => {
       const formData = new FormData();
       formData.append('avatar', croppedImage, 'avatar.jpg');
 
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'}/api/upload/avatar`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'https://hostelissuetracker-backend.onrender.com'}/api/upload/avatar`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
