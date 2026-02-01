@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { io, Socket } from 'socket.io-client';
 
-const SOCKET_URL = import.meta.env.VITE_API_BASE_URL || 'https://hostelissuetracker-backend.onrender.com';
+const SOCKET_URL = import.meta.env.VITE_API_BASE_URL;
 
 interface SocketContextType {
     socket: Socket | null;
