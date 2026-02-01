@@ -10,6 +10,12 @@ export default defineConfig(() => ({
     hmr: {
       overlay: false,
     },
+    proxy: {
+      '/socket.io': {
+        target: 'https://hostelissuetracker-backend.onrender.com',
+        ws: true,
+      },
+    },
   },
   plugins: [
     react(), // only React plugin
